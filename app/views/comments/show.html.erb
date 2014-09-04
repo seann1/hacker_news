@@ -1,0 +1,9 @@
+<h1><%= @post.comment%></h1>
+<% @comments_for_post.each do |i| %>
+  <ul>
+    <li><div class="comment"><%= i.content %></div></li>
+  </ul>
+<% end %>
+
+
+<%= render 'form' %>

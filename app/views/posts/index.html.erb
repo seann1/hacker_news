@@ -1,0 +1,9 @@
+<h1>HACKER NEWS CLONE</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+  <li><button class="btn btn-default btn-xs"><a href="/posts/<%= post.id %>/add_point">Vote up</a></button> points: <%= "#{post.points}"%> | <a href=<%= "#{post.url}"%>><%= "#{post.comment}"%></a> | <a href="/posts/<%= post.id %>/comments">Comment</a></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create new post", new_post_path, :class=> "btn btn-default" %>

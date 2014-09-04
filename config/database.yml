@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+
+  pool: 5
+
+development:
+  <<: *default
+  database: haker_news_development
+
+test:
+  <<: *default
+  database: haker_news_test
+
